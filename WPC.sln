@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeReporter.API", "CrimeReporter\CrimeReporter.API.csproj", "{C0F3E532-DAC2-47DB-8D00-441B5B79576E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrimeReporterTests", "CrimeReporterTests\CrimeReporterTests.csproj", "{BFC35E4E-75AB-4608-BC56-ABFFB19293B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrimeReporterTests", "CrimeReporterTests\CrimeReporterTests.csproj", "{BFC35E4E-75AB-4608-BC56-ABFFB19293B8}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "crimereporter.web", "CrimeReporter.Web\crimereporter.web.esproj", "{373FBEBB-DF48-4BDF-830B-8294798ADCCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{BFC35E4E-75AB-4608-BC56-ABFFB19293B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFC35E4E-75AB-4608-BC56-ABFFB19293B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC35E4E-75AB-4608-BC56-ABFFB19293B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{373FBEBB-DF48-4BDF-830B-8294798ADCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{373FBEBB-DF48-4BDF-830B-8294798ADCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{373FBEBB-DF48-4BDF-830B-8294798ADCCA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{373FBEBB-DF48-4BDF-830B-8294798ADCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{373FBEBB-DF48-4BDF-830B-8294798ADCCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{373FBEBB-DF48-4BDF-830B-8294798ADCCA}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

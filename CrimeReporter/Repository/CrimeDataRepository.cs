@@ -15,7 +15,7 @@ namespace CrimeReporter.Repository
         {
             try
             {
-                var uri = String.Format("?lat={0}&lng={1}&date=2023-{2}", query.Lat, query.Long, query.Month);
+                var uri = String.Format("?lat={0}&lng={1}&date={2}-{3}", query.Lat, query.Long, DateTime.Now.AddYears(-1).Year, query.Month);
                 List<CrimeData>? crimeData = new List<CrimeData>();
                 using (var client = new HttpClient())
                 {
@@ -30,7 +30,7 @@ namespace CrimeReporter.Repository
                 }
                 return crimeData;
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 throw;
             }

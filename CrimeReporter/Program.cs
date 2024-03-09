@@ -3,10 +3,22 @@ using CrimeReporter.Repository.Interfaces;
 using CrimeReporter.Services;
 using CrimeReporter.Services.Interfaces;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:5173")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                      });
+});
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICrimeDataRepository, CrimeDataRepository>();
 builder.Services.AddScoped<ICrimeDataService, CrimeDataService>();
@@ -23,6 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(MyAllowSpecificOrigins);
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
